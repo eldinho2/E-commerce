@@ -82,4 +82,35 @@ const dataHotSalePlants = [
     },
 ];
 
-export { dataTrendingPlants, dataHotSalePlants };
+const dataPlanters = [
+    {
+        id: uuidv4(),
+        image: '/planters/beige fracture.svg',
+        name: 'Beige Fracture',
+        price: 52.49,
+        oldPrice: 69.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/planters/ice cream pot.svg',
+        name: 'Ice Cream Pot',
+        price: 52.49,
+        oldPrice: 69.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/planters/mint fusion.svg',
+        name: 'Mint Fusion',
+        price: 52.49,
+        oldPrice: 69.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/planters/tale pot.svg',
+        name: 'Tale Pot',
+        price: 52.49,
+        oldPrice: 69.99,
+    },
+]
+
+export { dataTrendingPlants, dataHotSalePlants, dataPlanters };
