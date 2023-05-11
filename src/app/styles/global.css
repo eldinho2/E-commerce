@@ -1,5 +1,7 @@
 :root {
   --text-color: #343434;
+  --link-color: #3B823E;
+  --background-color: #e2e0e0;
 }
 
 * {
@@ -11,4 +13,5 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--background-color);
 }
