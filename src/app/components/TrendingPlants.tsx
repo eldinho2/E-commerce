@@ -1,6 +1,6 @@
 import ProductCard from './ProductCard';
 
-import dataTrendingPlants from '../data/data';
+import { dataTrendingPlants } from '../data/data';
 
 import styles from '../styles/trendingPlants.module.css';
 

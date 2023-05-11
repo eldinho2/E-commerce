@@ -51,4 +51,35 @@ const dataTrendingPlants = [
     },
 ];
 
-export default dataTrendingPlants;
+const dataHotSalePlants = [
+    {
+        id: uuidv4(),
+        image: '/hotSale/ficus.svg',
+        name: 'Ficus Benjamina twilight',
+        price: 59.99,
+        oldPrice: 79.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/hotSale/adenium.svg',
+        name: 'Planta Adenium Obesum',
+        price: 52.49,
+        oldPrice: 69.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/hotSale/rhoeo.svg',
+        name: 'Nunca-nunca',
+        price: 52.49,
+        oldPrice: 69.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/hotSale/ctenanthe.svg',
+        name: 'Planta Rhoeo',
+        price: 52.49,
+        oldPrice: 69.99,
+    },
+];
+
+export { dataTrendingPlants, dataHotSalePlants };

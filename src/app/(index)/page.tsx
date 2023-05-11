@@ -6,6 +6,7 @@ import PlantCategories from "../components/PlantCategories";
 import BestSelling from "../components/BestSelling";
 import TrendingPlants from "../components/TrendingPlants";
 import Blog from "../components/Blog";
+import HotSale from "../components/HotSale";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <BestSelling />
       <TrendingPlants />
       <Blog />
+      <HotSale />
     </main>
   );
 }
