@@ -8,6 +8,7 @@ import TrendingPlants from "../components/TrendingPlants";
 import Blog from "../components/Blog";
 import HotSale from "../components/HotSale";
 import Planters from "../components/Planters";
+import LandScapeGardening from "../components/LandScapeGardening";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <Blog />
       <HotSale />
       <Planters />
+      <LandScapeGardening />
     </main>
   );
 }
