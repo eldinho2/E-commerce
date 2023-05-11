@@ -17,4 +17,15 @@ body {
   box-sizing: border-box;
   background-color: var(--background-color);
   font-family: 'OpenSans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--background-button-color);
 }

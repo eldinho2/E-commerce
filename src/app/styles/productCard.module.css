@@ -4,7 +4,7 @@
     padding: 1rem;
     background-color: #fff;
     transition: all 0.2s ease-in-out;
-    gap: 16px;
+    gap: 10px;
 }
 
 .product_card_image {
@@ -24,6 +24,8 @@
     font-size: 20px;
     font-weight: 700;
     color: #343434;
+    margin-top: 0px;
+    margin-bottom: 8px;
 }
 
 .product_card_price {
@@ -35,7 +37,7 @@
 .product_card_button_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .product_card_button {

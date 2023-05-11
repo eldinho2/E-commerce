@@ -1,18 +1,54 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const data = [
+const dataTrendingPlants = [
     {
         id: uuidv4(),
-        image: '/jadeplant.svg',
+        image: '/trendPlants/jadeplant.svg',
         name: 'Jade',
-        price: 100,
+        price: 35.00,
     },
     {
         id: uuidv4(),
-        image: '/jadeplant.svg',
-        name: 'Limao',
-        price: 200,
+        image: '/trendPlants/aloe.svg',
+        name: 'Cacto',
+        price: 59.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/trendPlants/areca.svg',
+        name: 'Areca-bambu',
+        price: 45.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/trendPlants/cactus.svg',
+        name: 'Cacto-do-peru',
+        price: 29.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/trendPlants/chlorophytum.svg',
+        name: 'Planta-Aranha',
+        price: 30.00,
+    },
+    {
+        id: uuidv4(),
+        image: '/trendPlants/ficus.svg',
+        name: 'Ficus Benjamina',
+        price: 59.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/trendPlants/sansevieria.svg',
+        name: 'Espada São Jorge Negra',
+        price: 49.99,
+    },
+    {
+        id: uuidv4(),
+        image: '/trendPlants/syngorium.svg',
+        name: 'Planta-Cabeça-De-Flecha',
+        price: 45.99,
     },
 ];
 
-export default data;
+export default dataTrendingPlants;

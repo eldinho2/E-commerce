@@ -13,6 +13,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    max-width: 1190px;
 }
 
 .section_title {
