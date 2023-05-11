@@ -5,6 +5,7 @@ import styles from '../styles/homePage.module.css'
 import PlantCategories from "../components/PlantCategories";
 import BestSelling from "../components/BestSelling";
 import TrendingPlants from "../components/TrendingPlants";
+import Blog from "../components/Blog";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <PlantCategories />
       <BestSelling />
       <TrendingPlants />
+      <Blog />
     </main>
   );
 }
