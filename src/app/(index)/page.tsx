@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from '../styles/homePage.module.css'
 
 import PlantCategories from "../components/PlantCategories";
+import BestSelling from "../components/BestSelling";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         </div>
       </section>
       <PlantCategories />
+      <BestSelling />
     </main>
   );
 }

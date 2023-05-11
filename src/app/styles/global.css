@@ -2,6 +2,8 @@
   --text-color: #343434;
   --link-color: #3B823E;
   --background-color: #e2e0e0;
+  --background-button-color: #3B823E;
+  --background-button-hover-color: #2f6832;
 }
 
 * {
@@ -14,4 +16,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--background-color);
+  font-family: 'OpenSans', sans-serif;
 }

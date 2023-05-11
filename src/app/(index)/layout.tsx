@@ -1,4 +1,4 @@
-import { Open_Sans } from 'next/font/google'
+import { Open_Sans, Unna } from 'next/font/google'
 import Header from '../components/Header'
 
 import '@/app/styles/global.css'
@@ -11,6 +11,13 @@ export const metadata = {
 const OpenSans = Open_Sans ({
   weight:  ['400', '700'],
   subsets: ['latin'],
+  variable: '--font-open-sans',
+})
+
+const UnnaRegular = Unna ({
+  weight:  ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-unna',
 })
 
 export default function RootLayout({
@@ -20,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={OpenSans.className}>
+      <body className={`${UnnaRegular.variable} ${OpenSans.variable}`}>
         <Header />
         {children}
         </body>
