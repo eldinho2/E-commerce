@@ -4,6 +4,7 @@ import styles from '../styles/homePage.module.css'
 
 import PlantCategories from "../components/PlantCategories";
 import BestSelling from "../components/BestSelling";
+import TrendingPlants from "../components/TrendingPlants";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </section>
       <PlantCategories />
       <BestSelling />
+      <TrendingPlants />
     </main>
   );
 }
