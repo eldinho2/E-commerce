@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
+import Link from "next/link";
 
 import styles from "../styles/header.module.css"
 
@@ -8,10 +9,11 @@ const Header = () => {
   return (
     <>
     <div className={styles.mini_header}>
-      <span>Use code FIRST50 for a 50% discount on your first order!</span>
+      <span>Use o codigo FIRST50 para 50% de disconto na sua primeira compra!</span>
     </div>
     <header className={styles.header_container}>
-      <div>
+      <Link href="/">
+      <div className={styles.header_logo}>
         <Image
           src="/PAP Logo.svg"
           alt="logo"
@@ -21,10 +23,11 @@ const Header = () => {
           quality={100}
         />
       </div>
+      </Link>
       <nav>
         <ul className={styles.ul_container}>
           <li>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
             <a href="">Plantas</a>

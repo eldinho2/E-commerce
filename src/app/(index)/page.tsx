@@ -5,7 +5,6 @@ import styles from '../styles/homePage.module.css'
 import PlantCategories from "../components/PlantCategories";
 import BestSelling from "../components/BestSelling";
 import TrendingPlants from "../components/TrendingPlants";
-import Blog from "../components/Blog";
 import HotSale from "../components/HotSale";
 import Planters from "../components/Planters";
 import LandScapeGardening from "../components/LandScapeGardening";
@@ -30,7 +29,6 @@ export default function Home() {
       <PlantCategories />
       <BestSelling />
       <TrendingPlants />
-      <Blog />
       <HotSale />
       <Planters />
       <LandScapeGardening />
