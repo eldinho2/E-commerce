@@ -6,7 +6,7 @@ import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className={styles.footer_container}>
+    <footer className={styles.footer_container}>
       <div className={styles.footer_infos}>
         <div className={styles.logo_wrapper}>
           <Image
@@ -98,7 +98,7 @@ const Footer = () => {
           />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

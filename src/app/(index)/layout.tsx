@@ -1,5 +1,6 @@
 import { Open_Sans, Unna } from 'next/font/google'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import '@/app/styles/global.css'
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${UnnaRegular.variable} ${OpenSans.variable}`}>
         <Header />
         {children}
+        <Footer />
         </body>
     </html>
   )

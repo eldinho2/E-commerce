@@ -2,6 +2,7 @@ import { Open_Sans } from 'next/font/google'
 import Header from '../components/Header'
 
 import '@/app/styles/global.css'
+import Footer from '../components/Footer'
 
 export const metadata = {
   title: 'e-commerce',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={OpenSans.className}>
         <Header />
         {children}
+        <Footer />
         </body>
     </html>
   )

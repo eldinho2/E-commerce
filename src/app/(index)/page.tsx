@@ -10,7 +10,6 @@ import HotSale from "../components/HotSale";
 import Planters from "../components/Planters";
 import LandScapeGardening from "../components/LandScapeGardening";
 import Celebs from "../components/Celebs";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -36,7 +35,6 @@ export default function Home() {
       <Planters />
       <LandScapeGardening />
       <Celebs />
-      <Footer />
     </main>
   );
 }
