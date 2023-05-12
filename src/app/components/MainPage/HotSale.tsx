@@ -1,9 +1,9 @@
-import ProductCard from './ProductCard';
+import ProductCard from '../ProductCard';
 
-import { dataHotSalePlants } from '../data/data';
+import { dataHotSalePlants } from '../../data/data';
 
 
-import styles from "../styles/hotSale.module.css"
+import styles from "@/app/styles/hotSale.module.css"
 
 const HotSale = () => {
   return (

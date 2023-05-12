@@ -2,13 +2,13 @@ import Image from "next/image";
 
 import styles from '../styles/homePage.module.css'
 
-import PlantCategories from "../components/PlantCategories";
-import BestSelling from "../components/BestSelling";
-import TrendingPlants from "../components/TrendingPlants";
-import HotSale from "../components/HotSale";
-import Planters from "../components/Planters";
-import LandScapeGardening from "../components/LandScapeGardening";
-import Celebs from "../components/Celebs";
+import PlantCategories from "../components/MainPage/PlantCategories";
+import BestSelling from "../components/MainPage/BestSelling";
+import TrendingPlants from "../components/MainPage/TrendingPlants";
+import HotSale from "../components/MainPage/HotSale";
+import Planters from "../components/MainPage/Planters";
+import LandScapeGardening from "../components/MainPage/LandScapeGardening";
+import Celebs from "../components/MainPage/Celebs";
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
-import ProductCard from './ProductCard';
+import ProductCard from '../ProductCard';
 
-import { dataTrendingPlants } from '../data/data';
+import { dataTrendingPlants } from '../../data/data';
 
-import styles from '../styles/trendingPlants.module.css';
+import styles from '@/app/styles/trendingPlants.module.css';
 
 const PlantCategories = () => {
   return (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import styles from "../styles/celebs.module.css";
+import styles from "@/app/styles/celebs.module.css";
 
 const Celebs = () => {
   return (

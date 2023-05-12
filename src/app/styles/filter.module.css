@@ -1,0 +1,6 @@
+.filter_container {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}

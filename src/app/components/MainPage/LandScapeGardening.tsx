@@ -1,4 +1,4 @@
-import styles from "../styles/landScapeGardening.module.css";
+import styles from "@/app/styles/landScapeGardening.module.css";
 import Image from "next/image";
 
 const LandScapeGardening = () => {

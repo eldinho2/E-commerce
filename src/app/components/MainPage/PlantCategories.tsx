@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/plantCategories.module.css";
+import styles from "@/app/styles/plantCategories.module.css";
 import Link from 'next/link';
 
 import { AiOutlineArrowRight } from "react-icons/ai";

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/bestSelling.module.css";
+import styles from "@/app/styles/bestSelling.module.css";
 import Link from 'next/link';
 
 
