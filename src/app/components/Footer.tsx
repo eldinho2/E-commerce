@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.footer_infos}>
         <div className={styles.logo_wrapper}>
           <Image
-            src={"/footerLOGO.svg"}
+            src={"/mainpage/footerLOGO.svg"}
             alt="footerLOGO"
             width={250}
             height={70}
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
         <div>
           <Image
-            src={"/FOOTERBadge.svg"}
+            src={"/mainpage/FOOTERBadge.svg"}
             alt="FOOTERBadge"
             width={170}
             height={160}
@@ -89,9 +89,9 @@ const Footer = () => {
       <div className={styles.mini_footer}>
         <h1>Facilitamos seus pagamentos através de gateways confiáveis</h1>
         <div>
-          <Image src={"/footerVisa.svg"} alt="visa" width={30} height={30} />
+          <Image src={"/mainpage/footerVisa.svg"} alt="visa" width={30} height={30} />
           <Image
-            src={"/footerMC.svg"}
+            src={"/mainpage/footerMC.svg"}
             alt="mastercard"
             width={30}
             height={30}

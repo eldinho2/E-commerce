@@ -15,7 +15,7 @@ const Header = () => {
       <Link href="/">
       <div className={styles.header_logo}>
         <Image
-          src="/PAP Logo.svg"
+          src="/mainpage/PAP Logo.svg"
           alt="logo"
           width={133}
           height={51}

@@ -19,7 +19,7 @@ const LandScapeGardening = () => {
         </button>
       </div>
       <div>
-        <Image src={'/landscape.svg'} alt="landscape" width={500} height={400} />
+        <Image src={'/mainpage/landscape.svg'} alt="landscape" width={500} height={400} />
       </div>
       </div>
     </section>

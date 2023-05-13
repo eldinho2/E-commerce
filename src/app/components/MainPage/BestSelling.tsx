@@ -12,7 +12,7 @@ const BestSelling = () => {
         <div className={styles.best_selling_container}>
           <div className={styles.best_selling_container_image}>
             <Image
-              src={"/indoorplants.svg"}
+              src={"/mainpage/indoorplants.svg"}
               alt="indoor plants"
               width={344}
               height={318}
@@ -26,7 +26,7 @@ const BestSelling = () => {
         <div className={styles.best_selling_container}>
           <div className={styles.best_selling_container_image}>
             <Image
-              src={"/purificadorasdear.svg"}
+              src={"/mainpage/purificadorasdear.svg"}
               alt="indoor plants"
               width={344}
               height={318}
@@ -40,7 +40,7 @@ const BestSelling = () => {
         <div className={styles.best_selling_container}>
           <div className={styles.best_selling_container_image}>
             <Image
-              src={"/plantasfloríferas.svg"}
+              src={"/mainpage/plantasfloríferas.svg"}
               alt="indoor plants"
               width={344}
               height={318}

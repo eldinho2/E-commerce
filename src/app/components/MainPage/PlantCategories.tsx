@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const plants = [
-  {name: "Bonsai",image: "/bonsai.svg"},
-  {name: "Cactos",image: "/cactus.svg"},
-  {name: "Suculentas",image: "/suculenta.svg"},
-  {name: "Trepadeiras",image: "/trepadeira.svg"},
-  {name: "Sementes", image: "/sementes.svg"},
-  {name: "Plantas Para Presente", image: "/presentes.svg"},
+  {name: "Bonsai",image: "/mainpage/bonsai.svg"},
+  {name: "Cactos",image: "/mainpage/cactus.svg"},
+  {name: "Suculentas",image: "/mainpage/suculenta.svg"},
+  {name: "Trepadeiras",image: "/mainpage/trepadeira.svg"},
+  {name: "Sementes", image: "/mainpage/sementes.svg"},
+  {name: "Plantas Para Presente", image: "/mainpage/presentes.svg"},
 ];
 
 const PlantCategories = () => {

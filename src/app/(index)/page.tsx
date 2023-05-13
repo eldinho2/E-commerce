@@ -16,7 +16,7 @@ export default function Home() {
       <section>
         <div className={styles.image_wrapper}>
           <Image
-            src="/Rectangle 50Banner.svg"
+            src="/mainpage/Rectangle 50Banner.svg"
             alt="logo"
             width={2000}
             height={320}
