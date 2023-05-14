@@ -1,13 +1,16 @@
 import Image from "next/image";
-import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
+import { AiOutlineSearch } from "react-icons/ai";
 import Link from "next/link";
+
+import Profile from "./Profile";
+import Cart from "./Cart";
+
 
 import styles from "../styles/header.module.css"
 
 const Header = () => {
   return (
-    <>
+    <div className={styles.header_wrapper}>
     <div className={styles.mini_header}>
       <span>Use o codigo FIRST50 para 50% de disconto na sua primeira compra!</span>
     </div>
@@ -49,11 +52,11 @@ const Header = () => {
       </div>
 
       <div className={styles.infos}>
-          <AiOutlineShoppingCart />
-          <CgProfile />
+          <Profile />
+          <Cart />
       </div>
     </header>
-    </>
+    </div>
   );
 };
 

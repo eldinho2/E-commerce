@@ -1,3 +1,8 @@
+.header_wrapper {
+  position: fixed;
+  width: 100%;
+}
+
 .mini_header {
   background-color: #01370C;
   font-weight: 400;
@@ -79,4 +84,16 @@
 .infos {
   display: flex;
   gap: 56px;
+}
+
+.infos svg {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.infos svg:hover {
+  color: #3B823E;
+  background-color: #F0EAD2;
+  border-radius: 50%;
 }

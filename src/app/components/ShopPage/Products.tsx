@@ -18,6 +18,10 @@ const Products = ({pathName}:ProductsProps) => {
   console.log(category);
   
   const newData = allProducts.filter((product) => {
+    if (category === undefined) {
+      return product;
+    };
+
     if (product.category.includes(category)) {
       return product;
     }

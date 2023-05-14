@@ -11,7 +11,7 @@ export default function Home() {
       <section>
         <div className={styles.image_wrapper}>
           <Image
-            src="/Hero Bannershop.svg"
+            src="/mainpage/Hero Bannershop.svg"
             alt="logo"
             width={2000}
             height={320}
