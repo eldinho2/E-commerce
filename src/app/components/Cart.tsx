@@ -5,9 +5,8 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import styles from "@/app/styles/cart.module.css";
 import CartItem from "./CartItem";
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../GlobalRedux/store';
-import { deleteItem } from "../GlobalRedux/Features/cart/cartSlice";
 
 
 const Cart = () => {
@@ -15,7 +14,6 @@ const Cart = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [isAnimationDone, setIsAnimationDone] = useState(false);
 
-  const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
 
@@ -54,7 +52,6 @@ const Cart = () => {
                 name={item.name}
                 price={item.price}
                 quantity={item.quantity}
-                deleteItem={() => dispatch(deleteItem(item.id))}
               />
               ))}
             </div>
