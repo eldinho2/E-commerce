@@ -64,11 +64,16 @@
     background-color: #3B823E;
 }
 
-.product_card_button:hover,
-.product_card_button:focus
-{
+.product_card_button:hover {
     background-color: var(--background-button-hover-color);
 }
+
+.product_card_button:active {
+    background-color: var(--background-button-hover-color);
+
+    animation: OnPressButton 0.2s ease-in-out;
+}
+
 
 .product_card_container {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
@@ -81,4 +86,17 @@
     color: red;
     text-decoration: line-through;
     text-decoration-color: red;
+}
+
+
+@keyframes OnPressButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
