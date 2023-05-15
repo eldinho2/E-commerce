@@ -27,6 +27,7 @@
     color: #343434;
     margin-top: 0px;
     margin-bottom: 8px;
+    height: 50px;
 }
 
 .product_card_price {
@@ -35,10 +36,43 @@
     color: #343434;
 }
 
+.price_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product_card_quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.product_card_quantity p {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+.product_card_quantity svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #3B823E;
+}
+
+.product_card_quantity svg:active {
+    animation: OnPressButton 0.2s ease-in-out;
+}
+
 .product_card_button_wrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  user-select: none;
 }
 
 .product_card_button {

@@ -1,15 +1,19 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
 
 import styles from "../styles/productCard.module.css";
-import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
+import {
+  AiOutlineSearch,
+  AiOutlineShoppingCart,
+  AiOutlinePlus,
+  AiOutlineMinus,
+} from "react-icons/ai";
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../GlobalRedux/Features/cart/cartSlice";
 import { RootState } from "../GlobalRedux/store";
-
 
 interface TypeProduct {
   product: {
@@ -35,26 +39,28 @@ const ProductCard = ({ product, key }: TypeProduct) => {
   const dispatch = useDispatch();
 
   const cartItems = useSelector((state: RootState) => state.cart.items);
-  
 
   const handleAddToCart = () => {
-
-    const item:CartItem = {
+    const item: CartItem = {
       id: product.id,
       image: product.image,
       name: product.name,
       price: product.price,
-      quantity: quantity
+      quantity: quantity,
     };
 
-    console.log(cartItems);    
+    console.log(cartItems);
     dispatch(addToCart(item));
   };
 
-  const changeCartQuantity = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value);
-    setQuantity(value);
-  }
+  const changeCartQuantityUP = () => {
+    setQuantity(quantity + 1);
+  };
+  const changeCartQuantityDOWN = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   return (
     <div key={key} className={styles.product_card_container}>
@@ -68,16 +74,25 @@ const ProductCard = ({ product, key }: TypeProduct) => {
       </div>
       <div className={styles.product_card_name_price_wrapper}>
         <p className={styles.product_card_name}>{product.name}</p>
+        <div className={styles.price_wrapper}>
         <span className={styles.product_card_price}>R$ {product.price}</span>
         {product.oldPrice && (
           <span className={styles.product_card_old_price}>
             R$ {product.oldPrice}
           </span>
         )}
+        </div>
       </div>
       <div className={styles.product_card_button_wrapper}>
-      <input onChange={changeCartQuantity} className={styles.cart_quantity} type="number" min={1} max={100} value={quantity} />
-        <button onClick={handleAddToCart} className={styles.product_card_button}>
+        <div className={styles.product_card_quantity}>
+            <AiOutlinePlus onClick={changeCartQuantityUP} />
+          <p>{quantity}</p>
+            <AiOutlineMinus onClick={changeCartQuantityDOWN} />
+        </div>
+        <button
+          onClick={handleAddToCart}
+          className={styles.product_card_button}
+        >
           <AiOutlineShoppingCart />
           Adicionar ao Carrinho
         </button>

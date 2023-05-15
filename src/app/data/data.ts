@@ -180,7 +180,7 @@ const allProducts = [
     {
         id: uuidv4(),
         image: '/seeds/eucalipto_baby_blue_1.webp',
-        name: 'Sementes/Muda de Eucaipto',
+        name: 'Sementes Eucaipto',
         price: 546.99,
         category: ['outdoorPlants', 'outseeds']
     },
@@ -300,7 +300,7 @@ const allProducts = [
      {
         id: uuidv4(),
         image: '/seeds/vinca_pendente_cora_cascade_cherry_2393_2_b1a7d9764109a5f09af6d7e97876a194.webp',
-        name: 'Sementes de Vinca Pendente Cora Cascade Cherry',
+        name: 'Sementes de Vinca Cherry',
         price: 12.49,
         category: ['indoorPlants', 'seeds']
      },

@@ -1,5 +1,7 @@
 .product_list_wrapper {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: 1px solid red;
 }

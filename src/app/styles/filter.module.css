@@ -1,6 +1,13 @@
 .filter_container {
-  width: 1000px;
+  width: 400px;
   display: flex;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
+  position: relative;
+  border: 1px solid blue;
+}
+
+.filter_options {
+  position: fixed;
+  left: 10px;
 }
