@@ -3,11 +3,21 @@
 import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import styles from "@/app/styles/cart.module.css";
+import CartItem from "./CartItem";
+
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../GlobalRedux/store';
+import { deleteItem } from "../GlobalRedux/Features/cart/cartSlice";
+
 
 const Cart = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [isAnimationDone, setIsAnimationDone] = useState(false);
+
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state: RootState) => state.cart.items);
+
 
   const handleOpenCart = () => {
     setIsOpen(!isOpen);
@@ -30,9 +40,24 @@ const Cart = () => {
           className={`${styles.cart_container} ${isClosing && styles.closing}`}
           onAnimationEnd={() => setIsAnimationDone(false)}
         >
-          <div className={styles.cart_header}>
-            <h1>Seu Carrinho</h1>
-            <AiOutlineShoppingCart onClick={handleCloseCart} />
+          <div className={styles.cart_content}>
+            <div className={styles.cart_header}>
+              <AiOutlineShoppingCart onClick={handleCloseCart} />
+              Seu Carrinho
+            </div>
+            <div className={styles.cartItem_wrapper}>
+              {cartItems.map((item) => (
+              <CartItem
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                name={item.name}
+                price={item.price}
+                quantity={item.quantity}
+                deleteItem={() => dispatch(deleteItem(item.id))}
+              />
+              ))}
+            </div>
           </div>
         </div>
       )}

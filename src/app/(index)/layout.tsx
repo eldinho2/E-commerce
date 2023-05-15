@@ -2,6 +2,8 @@ import { Open_Sans, Unna } from 'next/font/google'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+import { Providers } from '../GlobalRedux/provider'
+
 import '@/app/styles/global.css'
 
 export const metadata = {
@@ -29,9 +31,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${UnnaRegular.variable} ${OpenSans.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
         </body>
     </html>
   )

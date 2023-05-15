@@ -83,7 +83,8 @@
 
 .infos {
   display: flex;
-  gap: 56px;
+  gap: 10px;
+  margin-right: 25px;
 }
 
 .infos svg {
@@ -96,4 +97,22 @@
   color: #3B823E;
   background-color: #F0EAD2;
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .header_container {
+    padding: 0 10px;
+  }
+
+  .ul_container {
+    display: none;
+  }
+
+  .infos {
+    gap: 20px;
+  }
+
+  .search_wrapper {
+    display: none;
+  }
 }
