@@ -12,7 +12,7 @@ interface CollapsibleListProps {
 }
 
 const CollapsibleList = (props: CollapsibleListProps) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const HandleIsCollapsed = () => {
     setIsCollapsed(!isCollapsed);

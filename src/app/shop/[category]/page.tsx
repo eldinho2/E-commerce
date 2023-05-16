@@ -13,8 +13,6 @@ export default function Home() {
 
   const pathname = usePathname();
   const category = pathname.split('/')[2];
-  console.log(category);
-
   return (
     <main>
     <section>

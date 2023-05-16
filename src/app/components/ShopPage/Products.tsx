@@ -13,7 +13,6 @@ interface ProductsProps {
 const Products = ({pathName}:ProductsProps) => {
   const pathname = usePathname();
   const category = pathname.split('/')[2];
-  console.log(category);
   
   const newData = allProducts.filter((product) => {
     if (category === undefined) {
