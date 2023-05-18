@@ -1,0 +1,31 @@
+.details_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details_image {
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.details_oldPrice {
+  color: red;
+  text-decoration: line-through;
+  margin: 0 0.5rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 1rem;
+}
