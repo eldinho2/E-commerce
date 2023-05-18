@@ -9,11 +9,8 @@ import ProductNotFound from "@/app/components/ProductNotFound";
 export default function Home() {
   const pathname = usePathname()
   const product = pathname.split('/')[2]
-  console.log(product);
-  const productData = allProducts.find((item) => item.name === product);
-  console.log(productData);
-  
-
+  const productFiltered = decodeURIComponent(product)
+  const productData = allProducts.find((item) => item.name === productFiltered);
 
   return (
     <main>
@@ -30,6 +27,7 @@ export default function Home() {
           </div>
           <div>
             <h1>{productData.name}</h1>
+            <p>{productData.details}</p>
             <p>{productData.price}</p>
           </div>
         </div>

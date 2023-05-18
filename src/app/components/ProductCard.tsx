@@ -16,6 +16,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../GlobalRedux/Features/cart/cartSlice";
 import { RootState } from "../GlobalRedux/store";
 
+import Link from "next/link";
+
 interface TypeProduct {
   product: {
     id: string;
@@ -102,12 +104,13 @@ const ProductCard = ({ product, key }: TypeProduct) => {
           <AiOutlineShoppingCart />
           Adicionar ao Carrinho
         </button>
+        <Link href={`/details/${product.name}`}>
         <button
-         onClick={handleProductDetails}
          className={styles.product_card_button}>
           <AiOutlineSearch />
           Ver Detalhes
         </button>
+        </Link>
       </div>
     </div>
   );
