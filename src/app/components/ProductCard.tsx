@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import styles from "../styles/productCard.module.css";
 import {
@@ -37,6 +38,7 @@ interface CartItem {
 const ProductCard = ({ product, key }: TypeProduct) => {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
@@ -52,6 +54,10 @@ const ProductCard = ({ product, key }: TypeProduct) => {
     console.log(cartItems);
     dispatch(addToCart(item));
   };
+
+  const handleProductDetails = () => {
+    router.push(`/details/${product.name}`);
+  }
 
   const changeCartQuantityUP = () => {
     setQuantity(quantity + 1);
@@ -96,7 +102,9 @@ const ProductCard = ({ product, key }: TypeProduct) => {
           <AiOutlineShoppingCart />
           Adicionar ao Carrinho
         </button>
-        <button className={styles.product_card_button}>
+        <button
+         onClick={handleProductDetails}
+         className={styles.product_card_button}>
           <AiOutlineSearch />
           Ver Detalhes
         </button>
