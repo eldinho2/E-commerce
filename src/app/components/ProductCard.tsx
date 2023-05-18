@@ -57,10 +57,6 @@ const ProductCard = ({ product, key }: TypeProduct) => {
     dispatch(addToCart(item));
   };
 
-  const handleProductDetails = () => {
-    router.push(`/details/${product.name}`);
-  }
-
   const changeCartQuantityUP = () => {
     setQuantity(quantity + 1);
   };
