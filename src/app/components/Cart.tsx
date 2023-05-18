@@ -30,6 +30,10 @@ const Cart = () => {
     }, 500);
   };
 
+  const totalCart = cartItems.reduce((acc, item) => {
+    return acc + item.price * item.quantity;
+  }, 0);
+
   return (
     <div>
       <AiOutlineShoppingCart onClick={handleOpenCart} />
@@ -38,11 +42,11 @@ const Cart = () => {
           className={`${styles.cart_container} ${isClosing && styles.closing}`}
           onAnimationEnd={() => setIsAnimationDone(false)}
         >
-          <div className={styles.cart_content}>
             <div className={styles.cart_header}>
               <AiOutlineShoppingCart onClick={handleCloseCart} />
               Seu Carrinho
             </div>
+          <div className={styles.cart_content}>
             <div className={styles.cartItem_wrapper}>
               {cartItems.map((item) => (
               <CartItem
@@ -55,6 +59,10 @@ const Cart = () => {
               />
               ))}
             </div>
+          </div>
+          <div className={styles.cart_footer}>
+            <span>Total: {totalCart.toFixed(2)}</span>
+            <button className={styles.card_button}>Finalizar Compra</button>
           </div>
         </div>
       )}

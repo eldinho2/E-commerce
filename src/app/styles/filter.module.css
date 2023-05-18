@@ -16,13 +16,16 @@
 
 .filter_options li {
   list-style: none;
-  margin-bottom: 10px;
 }
 
 .filter_options a {
   display: flex;
-  gap: 14px;
-  align-items: center;
+  gap: 4px;
+  align-items: baseline;
   text-decoration: none;
   color: #000;
+}
+
+.filter_options a p {
+  margin-bottom: 8px;
 }
