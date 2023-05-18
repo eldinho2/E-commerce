@@ -41,8 +41,6 @@ export default function Home() {
   const productFiltered = decodeURIComponent(product);
   const productData = allProducts.find((item) => item.name === productFiltered);
 
-  const findRelacionatedProducts = () => {};
-
   const handleSetCep = (e: ChangeEvent<HTMLInputElement>) => {
     setCep(e.target.value);
   };
@@ -95,9 +93,6 @@ export default function Home() {
       setQuantity(quantity - 1);
     }
   };
-
-  console.log(cepData);
-
   return (
     <main>
       <section className={styles.details_container}>
@@ -178,11 +173,16 @@ export default function Home() {
                     <div
                       key={item.cep}
                       className={styles.details_delivery_calc_result}
-                    >
-                      <span>{item.logradouro}</span>
-                      <span>{item.bairro}</span>
-                      <span>{item.localidade}</span>
+                    > 
+                      <p>
+                        Delivery disponivel para esta localidade com o prazo entre <span>5 a 10 dias úteis.</span>
+                      </p>
+                      <div className={styles.details_delivery_calc_result_cep}>
+                      <span>{item.logradouro},&nbsp;</span>
+                      <span>{item.bairro},&nbsp;</span>
+                      <span>{item.localidade}&nbsp;</span>
                       <span>{item.uf}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
