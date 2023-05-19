@@ -24,7 +24,6 @@ interface TypeProduct {
     price: number;
     oldPrice?: number;
   };
-  key: string;
 }
 
 interface CartItem {
@@ -35,7 +34,7 @@ interface CartItem {
   quantity: number;
 }
 
-const ProductCard = ({ product, key }: TypeProduct) => {
+const ProductCard = ({ product }: TypeProduct) => {
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
@@ -63,7 +62,7 @@ const ProductCard = ({ product, key }: TypeProduct) => {
   };
 
   return (
-    <div key={key} className={styles.product_card_container}>
+    <div className={styles.product_card_container}>
       <div className={styles.product_card_image}>
         <Image
           src={product.image}

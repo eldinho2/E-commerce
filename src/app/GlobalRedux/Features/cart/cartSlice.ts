@@ -25,9 +25,12 @@ export const cartSlice = createSlice({
     addToCart:(state, action: PayloadAction<CartItem>) => {
       const index = state.items.findIndex((item) => item.name === action.payload.name);
       if (index >= 0) {
-        state.items[index].quantity += 1;
+        console.log('quantitiy', action.payload.quantity);
+        
+        state.items[index].quantity += action.payload.quantity;
         return;
       }
+
       state.items.push(action.payload);
     },
     deleteItem: (state, action: PayloadAction<string>) => {
