@@ -24,6 +24,9 @@ const Filter = () => {
           <Link href={"/shop"}>
             <h1>Todas as Categorias</h1>
           </Link>
+          <Link href={"/shop/planters"}>
+            <h1>Vasos</h1>
+          </Link>
           <IndoorPlantsFilter quantity={result} />
           <OutdoorPlantsFilter quantity={result} />
         </div>

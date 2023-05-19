@@ -52,10 +52,10 @@ const Header = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="">Plantas</a>
+            <Link href="/shop">Plantas</Link>
             </li>
             <li>
-              <a href="">Vasos</a>
+            <Link href="/shop/planters">Vasos</Link>
             </li>
             <li>
               <Link href="/shop">Shop</Link>
