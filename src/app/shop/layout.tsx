@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import '@/app/styles/global.css'
 import Footer from '../components/Footer'
 
-import { Providers } from '../GlobalRedux/provider'
+import { Providers } from '@/app/GlobalRedux/provider'
 
 
 export const metadata = {

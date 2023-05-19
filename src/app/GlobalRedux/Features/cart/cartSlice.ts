@@ -23,9 +23,9 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart:(state, action: PayloadAction<CartItem>) => {
-      const index = state.items.findIndex((item) => item.id === action.payload.id);
+      const index = state.items.findIndex((item) => item.name === action.payload.name);
       if (index >= 0) {
-        state.items[index].quantity += action.payload.quantity;
+        state.items[index].quantity += 1;
         return;
       }
       state.items.push(action.payload);

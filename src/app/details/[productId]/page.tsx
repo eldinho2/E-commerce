@@ -15,7 +15,9 @@ import {
 } from "react-icons/ai";
 
 import ProductNotFound from "@/app/components/ProductNotFound";
-import ProductCard from "@/app/components/ProductCard";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "@/app/GlobalRedux/Features/cart/cartSlice";
+import { RootState } from "@/app/GlobalRedux/store";
 
 import styles from "@/app/styles/productDetails.module.css";
 
@@ -26,6 +28,15 @@ interface cepData {
   localidade: string;
   uf: string;
 }
+
+interface ProductData {
+  id: string,
+  image: string,
+  name: string,
+  price: number,
+  quantity: number,
+}
+
 
 export default function Home() {
   const [careGuideOpen, setCareGuideOpen] = useState(true);
@@ -40,6 +51,31 @@ export default function Home() {
   const product = pathname.split("/")[2];
   const productFiltered = decodeURIComponent(product);
   const productData = allProducts.find((item) => item.name === productFiltered);
+
+  const dispatch = useDispatch();
+
+  interface CartItem {
+    id: string;
+    image: string;
+    name: string;
+    price: number;
+    quantity: number;
+  }
+
+  const handleAddToCart = () => {
+    if (!productData) return;
+    
+    const item = {
+      id: productData.id,
+      image: productData.image,
+      name: productData.name,
+      price: productData.price,
+      quantity: quantity,
+    };
+
+
+    dispatch(addToCart(item));
+  };
 
   const handleSetCep = (e: ChangeEvent<HTMLInputElement>) => {
     setCep(e.target.value);
@@ -140,7 +176,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.button_wrapper}>
-                <button className={styles.button}>Adicionar ao Carrinho</button>
+                <button onClick={handleAddToCart} className={styles.button}>Adicionar ao Carrinho</button>
               </div>
               <div className={styles.details_delivery}>
                 <h2>Entrega</h2>

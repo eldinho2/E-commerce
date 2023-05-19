@@ -1,6 +1,6 @@
 const ProductNotFound = () => {
   return (
-    <div>hftht</div>
+    <div>Produto nao encontrado</div>
   )
 }
 
