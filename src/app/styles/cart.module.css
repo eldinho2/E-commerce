@@ -113,8 +113,6 @@
     margin-left: 10px;
 }
 
-
-
 @keyframes cartOpen {
     0% {
         transform: translateX(100%);
@@ -122,13 +120,6 @@
 
     100% {
         transform: translateX(0%);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .cart_container {
-        left: 0%;
-        top: 0px;
     }
 }
 
@@ -141,5 +132,28 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media(max-width: 768px) {
+    .cart_content {
+        top: 0%;
+        height: 70%;
+        max-width: 100%;
+    }
+
+    .cart_header{
+        top: 0%;
+        max-width: 100%;
+    }
+
+    .cart_footer {
+        top: 0%;
+        max-width: 100%;
+    }
+
+    .cart_container {
+        top: 0%;
+        left: 0%;
     }
 }
