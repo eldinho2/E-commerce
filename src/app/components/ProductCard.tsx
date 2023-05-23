@@ -94,13 +94,15 @@ const ProductCard = ({ product }: TypeProduct) => {
             className={styles.product_card_button}
           >
             <AiOutlineShoppingCart />
-            Adicionar ao Carrinho
+            <p className={styles.mobile_title}>Carrinho</p>
+            <h1>Adicionar ao Carrinho</h1>
           </button>
           <Link href={`/details/${product.name}`}>
           <button
           className={styles.product_card_button}>
             <AiOutlineSearch />
-            Ver Detalhes
+            <p className={styles.mobile_title}>Detalhess</p>
+            <h1>Ver Detalhes</h1>
           </button>
           </Link>
         </div>
