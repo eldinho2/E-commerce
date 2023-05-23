@@ -61,6 +61,49 @@
   transition: 0.3s;
 }
 
+@media screen and (max-width: 768px) {
+  .section_containter {
+    margin-top: 20px;
+  }
 
+  .section_title {
+    text-align: center;
+  }
 
+  .celeb1_container {
+    width: 80px;
+    height: 80px;
+  }
 
+  .celeb1_container img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .celebs1row {
+    height: 50px;
+    margin-bottom: 2px;
+  }
+
+  .celeb2_container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .celeb2_container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .celeb1_container {
+    margin-bottom: 50px;
+  }
+
+  .celebs2row {
+    height: 100px;
+  }
+
+  .celeb2_container {
+    margin-bottom: 50px;
+  }
+}
