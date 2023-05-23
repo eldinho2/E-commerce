@@ -149,10 +149,10 @@
 
 @media (max-width: 768px) {
   .header_container {
-    padding-rigth: 0 15px;
+    padding: 0px;
     justify-content: flex-start;
     gap: 24px;
-    width: 200px;
+    width: 100%;
   }
 
   .cart_notification_wrapper {

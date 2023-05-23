@@ -13,3 +13,9 @@
   object-position: center;
   user-select: none;
 }
+
+@media(max-width: 768px) {
+  .image_wrapper {
+    height: 120px;
+  }
+}

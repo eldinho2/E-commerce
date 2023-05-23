@@ -85,3 +85,9 @@
 .plant_categories_image {
   cursor: pointer;
 }
+
+@media(max-width: 768px) {
+  .section_container {
+    display: none;
+  }
+}

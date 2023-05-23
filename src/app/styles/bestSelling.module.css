@@ -81,5 +81,23 @@
 .best_selling_container:hover .best_selling_image {
    transform: scale(1.05);
 }
-  
 
+@media(max-width: 768px) {
+    .best_selling_wrapper {
+        gap: 10px;
+    }
+
+    .best_selling_container_image {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .best_selling_image {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+}
