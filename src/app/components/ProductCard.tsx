@@ -88,20 +88,22 @@ const ProductCard = ({ product }: TypeProduct) => {
           <p>{quantity}</p>
             <AiOutlineMinus onClick={changeCartQuantityDOWN} />
         </div>
-        <button
-          onClick={handleAddToCart}
-          className={styles.product_card_button}
-        >
-          <AiOutlineShoppingCart />
-          Adicionar ao Carrinho
-        </button>
-        <Link href={`/details/${product.name}`}>
-        <button
-         className={styles.product_card_button}>
-          <AiOutlineSearch />
-          Ver Detalhes
-        </button>
-        </Link>
+        <div className={styles.button_wrapper}>
+          <button
+            onClick={handleAddToCart}
+            className={styles.product_card_button}
+          >
+            <AiOutlineShoppingCart />
+            Adicionar ao Carrinho
+          </button>
+          <Link href={`/details/${product.name}`}>
+          <button
+          className={styles.product_card_button}>
+            <AiOutlineSearch />
+            Ver Detalhes
+          </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
