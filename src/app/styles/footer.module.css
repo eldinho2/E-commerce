@@ -88,3 +88,39 @@
   justify-content: center;
   gap: 10px;
 }
+
+@media (max-width: 768px) {
+  .footer_container {
+    flex-direction: column;
+  }
+
+  .footer_infos {
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .logo_wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .links_wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .socials {
+    margin-bottom: 20px;
+  }
+
+  .mini_footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer_badge {
+    display: flex;
+    justify-content: center;
+  }
+}

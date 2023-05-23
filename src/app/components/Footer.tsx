@@ -69,7 +69,7 @@ const Footer = () => {
           </ul>
         </div>
         </div>
-        <div>
+        <div className={styles.footer_badge}>
           <Image
             src={"/mainpage/FOOTERBadge.svg"}
             alt="FOOTERBadge"
