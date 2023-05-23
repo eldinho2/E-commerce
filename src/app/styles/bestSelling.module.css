@@ -88,16 +88,25 @@
     }
 
     .best_selling_container_image {
-        width: 115px;
-        height: 115px;
+        width: 100px;
+        height: 100px;
         overflow: hidden;
         border-radius: 10px;
     }
 
     .best_selling_image {
-        width: 115px;
-        height: 115px;
+        width: 100px;
+        height: 100px;
         overflow: hidden;
         border-radius: 10px;
+    }
+
+    .best_selling_container {
+        width: 100px;
+    }
+
+    .best_selling_button {
+        height: 40px;
+        font-size: 14px;
     }
 }

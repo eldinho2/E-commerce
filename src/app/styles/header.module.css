@@ -151,12 +151,12 @@
   .header_container {
     padding: 0px;
     justify-content: flex-start;
-    gap: 24px;
+    gap: 30px;
     width: 100%;
   }
 
   .cart_notification_wrapper {
-    gap: 10px;
+    gap: 0px;
   }
 
   .cart_notification {
