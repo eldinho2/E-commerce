@@ -24,3 +24,9 @@
   gap: 20px;
   max-width: 1190px;
 }
+
+@media (max-width: 768px) {
+  .section_containter {
+    margin-top: 10px;
+  }
+}

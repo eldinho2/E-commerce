@@ -84,19 +84,19 @@
 
 @media(max-width: 768px) {
     .best_selling_wrapper {
-        gap: 10px;
+        gap: 4px;
     }
 
     .best_selling_container_image {
-        width: 120px;
-        height: 120px;
+        width: 115px;
+        height: 115px;
         overflow: hidden;
         border-radius: 10px;
     }
 
     .best_selling_image {
-        width: 120px;
-        height: 120px;
+        width: 115px;
+        height: 115px;
         overflow: hidden;
         border-radius: 10px;
     }

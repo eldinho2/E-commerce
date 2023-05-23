@@ -24,3 +24,9 @@
     padding-bottom: 10px;
     color: #343434;
 }
+
+@media (max-width: 768px) {
+    .section_containter {
+      margin-top: 10px;
+    }
+  }
