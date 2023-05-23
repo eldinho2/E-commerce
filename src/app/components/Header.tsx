@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { AiOutlineSearch } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
-
-import Profile from "./Profile";
 import Cart from "./Cart";
+import HamburguerMenu from "./HamburguerMenu";
 
 import { useSelector } from "react-redux";
 
@@ -15,8 +15,6 @@ import { RootState } from "../GlobalRedux/store";
 
 const Header = () => {
   const [isAnimated, setIsAnimated] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
-
   const localStorageCart = useSelector((state: RootState) => state.cart.items);  
 
   useEffect(() => {
@@ -66,9 +64,9 @@ const Header = () => {
           <AiOutlineSearch />
           <input type="text" placeholder="Buscar" />
         </div>
-
+          <HamburguerMenu />
         <div className={styles.infos}>
-          <Profile />
+          <CgProfile />
           <div className={styles.cart_notification_wrapper}>
             <div
               className={`${
