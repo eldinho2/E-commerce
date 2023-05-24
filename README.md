@@ -4,7 +4,7 @@
 Este projeto é inspirado no conceito de e-commerce e tem como objetivo fornecer uma plataforma rica em recursos para compras online. Com uma interface atraente e fácil de usar, os usuários podem explorar várias categorias, visualizar detalhes dos produtos, adicionar itens ao carrinho e concluir o processo de checkout de forma segura.
 
 <p align="center">
-  <img src="https://github.com/eldinho2/E-commerce/planaplant.png" alt="Captura de tela do E-commerce" width="100%">
+  <img src="E-commerce/planaplant.png" alt="Captura de tela do E-commerce" width="100%">
 </p>
 
 ## Recursos
