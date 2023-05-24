@@ -7,7 +7,7 @@ Este projeto é inspirado no conceito de e-commerce e tem como objetivo fornecer
   <img src="/planaplant.png" alt="Captura de tela do E-commerce" width="100%">
 </p>
 
-## Recursos
+## Recursos 📝
 - Interface intuitiva e atraente.
 - Produtos em destaque apresentados na página inicial.
 - Navegação fácil e rápida por categorias.
@@ -17,7 +17,7 @@ Este projeto é inspirado no conceito de e-commerce e tem como objetivo fornecer
 - Opções de pagamento confiáveis.
 - Suporte para diferentes opções de cor e tamanho de produtos.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas 🚀
 - Next.js
 - CSS
 - TypeScript
@@ -69,9 +69,3 @@ Contribuições são bem-vindas! Se você deseja contribuir para o projeto E-com
 
 ## Licença
 Este projeto está licenciado sob a [Licença MIT](https://github.com/eldinho2/E-commerce/blob/main/LICENSE).
-
-## Contato
-Se você tiver alguma dúvida ou sugestão sobre este projeto, sinta-se à vontade para entrar em contato com o desenvolvedor:
-
-Nome: [Seu Nome]
-Email: [Seu Email]
