@@ -11,17 +11,18 @@ Este projeto é inspirado no conceito de e-commerce e tem como objetivo fornecer
 - Interface intuitiva e atraente.
 - Produtos em destaque apresentados na página inicial.
 - Navegação fácil e rápida por categorias.
-- Filtragem e ordenação de produtos por preço, popularidade e avaliações.
+- Filtragem e ordenação de produtos.
 - Informações detalhadas do produto, incluindo especificações técnicas e avaliações dos clientes.
 - Carrinho de compras para adicionar e gerenciar produtos.
-- Processo de checkout seguro e protegido.
 - Opções de pagamento confiáveis.
 - Suporte para diferentes opções de cor e tamanho de produtos.
 
 ## Tecnologias Utilizadas
-- HTML5
-- CSS3
+- Next.js
+- CSS
+- TypeScript
 - JavaScript
+- Redux
 - React.js
 - Vercel (para implantação do site)
 
