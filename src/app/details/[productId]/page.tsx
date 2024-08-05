@@ -30,13 +30,12 @@ interface cepData {
 }
 
 interface ProductData {
-  id: string,
-  image: string,
-  name: string,
-  price: number,
-  quantity: number,
+  id: string;
+  image: string;
+  name: string;
+  price: number;
+  quantity: number;
 }
-
 
 export default function Home() {
   const [careGuideOpen, setCareGuideOpen] = useState(true);
@@ -64,7 +63,7 @@ export default function Home() {
 
   const handleAddToCart = () => {
     if (!productData) return;
-    
+
     const item = {
       id: productData.id,
       image: productData.image,
@@ -72,7 +71,6 @@ export default function Home() {
       price: productData.price,
       quantity: quantity,
     };
-
 
     dispatch(addToCart(item));
   };
@@ -176,7 +174,9 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.button_wrapper}>
-                <button onClick={handleAddToCart} className={styles.button}>Adicionar ao Carrinho</button>
+                <button onClick={handleAddToCart} className={styles.button}>
+                  Adicionar ao Carrinho
+                </button>
               </div>
               <div className={styles.details_delivery}>
                 <h2>Entrega</h2>
@@ -209,15 +209,16 @@ export default function Home() {
                     <div
                       key={item.cep}
                       className={styles.details_delivery_calc_result}
-                    > 
+                    >
                       <p>
-                        Delivery disponivel para esta localidade com o prazo entre <span>5 a 10 dias úteis.</span>
+                        Delivery disponivel para esta localidade com o prazo
+                        entre <span>5 a 10 dias úteis.</span>
                       </p>
                       <div className={styles.details_delivery_calc_result_cep}>
-                      <span>{item.logradouro},&nbsp;</span>
-                      <span>{item.bairro},&nbsp;</span>
-                      <span>{item.localidade}&nbsp;</span>
-                      <span>{item.uf}</span>
+                        <span>{item.logradouro},&nbsp;</span>
+                        <span>{item.bairro},&nbsp;</span>
+                        <span>{item.localidade}&nbsp;</span>
+                        <span>{item.uf}</span>
                       </div>
                     </div>
                   ))}
@@ -238,164 +239,167 @@ export default function Home() {
             height={580}
             className={styles.other_details_image}
           />
-        </div>
-        <div className={styles.other_details_wrapper}>
-          <div className={styles.other_details}>
-            <div className={styles.other_details_dropdown}>
-              <div className={styles.other_details_dropdown_headers}>
-                <h2 onClick={() => handleOpenDropDown("careGuideOpen")}>
-                  {careGuideOpen ? (
-                    <AiOutlineArrowDown />
-                  ) : (
-                    <AiOutlineArrowRight />
+          <div className={styles.other_details_wrapper}>
+            <div className={styles.other_details}>
+              <div className={styles.other_details_dropdown}>
+                <div className={styles.other_details_dropdown_headers}>
+                  <h2 onClick={() => handleOpenDropDown("careGuideOpen")}>
+                    {careGuideOpen ? (
+                      <AiOutlineArrowDown />
+                    ) : (
+                      <AiOutlineArrowRight />
+                    )}
+                    Guia de Cuidados
+                  </h2>
+                  <h2 onClick={() => handleOpenDropDown("plantBioOpen")}>
+                    {plantBioOpen ? (
+                      <AiOutlineArrowDown />
+                    ) : (
+                      <AiOutlineArrowRight />
+                    )}
+                    Sobre a Planta
+                  </h2>
+                  <h2 onClick={() => handleOpenDropDown("reviewsOpen")}>
+                    {reviewsOpen ? (
+                      <AiOutlineArrowDown />
+                    ) : (
+                      <AiOutlineArrowRight />
+                    )}
+                    Avaliações
+                  </h2>
+                </div>
+                <div
+                  className={styles.other_details_dropdown_content_container}
+                >
+                  {careGuideOpen && (
+                    <div className={styles.other_details_dropdown_content}>
+                      <h1>Regagem</h1>
+                      <p>
+                        Verifique as necessidades de regagem específicas de cada
+                        planta. Algumas plantas requerem rega regular, enquanto
+                        outras preferem que o solo seque um pouco entre as
+                        regas. Observe os sinais de falta ou excesso de água,
+                        como folhas murchas ou amareladas. Forneça água
+                        suficiente para manter o solo úmido, mas evite
+                        encharcar, pois o acúmulo de água pode levar ao
+                        apodrecimento das raízes.
+                      </p>
+                      <h1>Requisitos de Luz</h1>
+                      <p>
+                        Conheça os requisitos de luz de cada planta. Algumas
+                        plantas preferem luz solar direta, enquanto outras se
+                        adaptam melhor à luz indireta ou sombra. Posicione as
+                        plantas em locais que atendam às suas necessidades de
+                        luz. Isso pode incluir janelas ensolaradas para plantas
+                        que adoram sol ou áreas com menor intensidade luminosa
+                        para plantas que preferem sombra. Observe sinais de
+                        falta ou excesso de luz, como folhas queimadas pelo sol
+                        ou crescimento lento.
+                      </p>
+                      <h1>Umidade</h1>
+                      <p>
+                        Monitore a umidade do ambiente em que as plantas estão
+                        localizadas. Algumas plantas preferem um ambiente mais
+                        úmido, enquanto outras se adaptam bem a ambientes mais
+                        secos. Use técnicas como pulverização de água, bandejas
+                        de água ou umidificadores para ajustar a umidade, se
+                        necessário, de acordo com as necessidades das plantas.
+                      </p>
+                    </div>
                   )}
-                  Guia de Cuidados
-                </h2>
-                <h2 onClick={() => handleOpenDropDown("plantBioOpen")}>
-                  {plantBioOpen ? (
-                    <AiOutlineArrowDown />
-                  ) : (
-                    <AiOutlineArrowRight />
+                  {plantBioOpen && (
+                    <div className={styles.other_details_dropdown_content}>
+                      <h1>Descrição</h1>
+                      <p>
+                        A Planta é uma adição versátil e encantadora para
+                        qualquer espaço. Com suas características únicas e
+                        beleza natural, essa planta trará vida e frescor onde
+                        quer que seja colocada.
+                      </p>
+                      <h1>Características</h1>
+                      <ul>
+                        <li>
+                          Folhagem Exuberante: A planta exibe uma folhagem
+                          exuberante, com diferentes formas e tamanhos de
+                          folhas. Sua variedade de tons verdes adiciona
+                          profundidade e vivacidade ao ambiente.
+                        </li>
+                        <li>
+                          Adaptabilidade: Essa planta possui uma capacidade
+                          impressionante de se adaptar a diferentes condições de
+                          luz e umidade. Ela pode prosperar tanto em locais com
+                          luz direta como em áreas com sombra parcial.
+                        </li>
+                        <li>
+                          Estilo Minimalista: Com sua simplicidade elegante, a
+                          planta se encaixa perfeitamente em qualquer estilo de
+                          decoração, desde ambientes modernos a espaços mais
+                          tradicionais.
+                        </li>
+                      </ul>
+                    </div>
                   )}
-                  Sobre a Planta
-                </h2>
-                <h2 onClick={() => handleOpenDropDown("reviewsOpen")}>
-                  {reviewsOpen ? (
-                    <AiOutlineArrowDown />
-                  ) : (
-                    <AiOutlineArrowRight />
-                  )}
-                  Avaliações
-                </h2>
-              </div>
-              <div className={styles.other_details_dropdown_content_container}>
-                {careGuideOpen && (
-                  <div className={styles.other_details_dropdown_content}>
-                    <h1>Regagem</h1>
-                    <p>
-                      Verifique as necessidades de regagem específicas de cada
-                      planta. Algumas plantas requerem rega regular, enquanto
-                      outras preferem que o solo seque um pouco entre as regas.
-                      Observe os sinais de falta ou excesso de água, como folhas
-                      murchas ou amareladas. Forneça água suficiente para manter
-                      o solo úmido, mas evite encharcar, pois o acúmulo de água
-                      pode levar ao apodrecimento das raízes.
-                    </p>
-                    <h1>Requisitos de Luz</h1>
-                    <p>
-                      Conheça os requisitos de luz de cada planta. Algumas
-                      plantas preferem luz solar direta, enquanto outras se
-                      adaptam melhor à luz indireta ou sombra. Posicione as
-                      plantas em locais que atendam às suas necessidades de luz.
-                      Isso pode incluir janelas ensolaradas para plantas que
-                      adoram sol ou áreas com menor intensidade luminosa para
-                      plantas que preferem sombra. Observe sinais de falta ou
-                      excesso de luz, como folhas queimadas pelo sol ou
-                      crescimento lento.
-                    </p>
-                    <h1>Umidade</h1>
-                    <p>
-                      Monitore a umidade do ambiente em que as plantas estão
-                      localizadas. Algumas plantas preferem um ambiente mais
-                      úmido, enquanto outras se adaptam bem a ambientes mais
-                      secos. Use técnicas como pulverização de água, bandejas de
-                      água ou umidificadores para ajustar a umidade, se
-                      necessário, de acordo com as necessidades das plantas.
-                    </p>
-                  </div>
-                )}
-                {plantBioOpen && (
-                  <div className={styles.other_details_dropdown_content}>
-                    <h1>Descrição</h1>
-                    <p>
-                      A Planta é uma adição versátil e encantadora para qualquer
-                      espaço. Com suas características únicas e beleza natural,
-                      essa planta trará vida e frescor onde quer que seja
-                      colocada.
-                    </p>
-                    <h1>Características</h1>
-                    <ul>
-                      <li>
-                        Folhagem Exuberante: A planta exibe uma folhagem
-                        exuberante, com diferentes formas e tamanhos de folhas.
-                        Sua variedade de tons verdes adiciona profundidade e
-                        vivacidade ao ambiente.
-                      </li>
-                      <li>
-                        Adaptabilidade: Essa planta possui uma capacidade
-                        impressionante de se adaptar a diferentes condições de
-                        luz e umidade. Ela pode prosperar tanto em locais com
-                        luz direta como em áreas com sombra parcial.
-                      </li>
-                      <li>
-                        Estilo Minimalista: Com sua simplicidade elegante, a
-                        planta se encaixa perfeitamente em qualquer estilo de
-                        decoração, desde ambientes modernos a espaços mais
-                        tradicionais.
-                      </li>
-                    </ul>
-                  </div>
-                )}
-                {reviewsOpen && (
-                  <div
-                    className={
-                      styles.other_details_dropdown_content_review_wrapper
-                    }
-                  >
+                  {reviewsOpen && (
                     <div
-                      className={styles.other_details_dropdown_content_review}
+                      className={
+                        styles.other_details_dropdown_content_review_wrapper
+                      }
                     >
-                      <div className={styles.review}>
-                        <h1>Felipe</h1>
-                        <span>1 dia atrás</span>
-                        <p>
-                          A Planta é linda e se adaptou facilmente ao meu
-                          espaço. Estou muito satisfeito!
-                        </p>
-                        <span>
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                        </span>
-                      </div>
-                      <div className={styles.review}>
-                        <h1>Ana</h1>
-                        <span>1 semana atrás</span>
-                        <p>
-                          A Planta é simplesmente encantadora! Adoro como ela
-                          traz vida ao meu ambiente de forma tão fácil de
-                          cuidar. Recomendo!
-                        </p>
-                        <span>
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiOutlineStar />
-                          <AiOutlineStar />
-                        </span>
-                      </div>
-                      <div className={styles.review}>
-                        <h1>Pedro</h1>
-                        <span>3 dias atrás</span>
-                        <p>
-                          A Planta é perfeita para quem procura uma planta
-                          versátil e de baixa manutenção. Estou muito feliz com
-                          a minha escolha e ela adicionou um toque especial à
-                          minha casa.
-                        </p>
-                        <span>
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiFillStar />
-                          <AiOutlineStar />
-                        </span>
+                      <div
+                        className={styles.other_details_dropdown_content_review}
+                      >
+                        <div className={styles.review}>
+                          <h1>Felipe</h1>
+                          <span>1 dia atrás</span>
+                          <p>
+                            A Planta é linda e se adaptou facilmente ao meu
+                            espaço. Estou muito satisfeito!
+                          </p>
+                          <span>
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                          </span>
+                        </div>
+                        <div className={styles.review}>
+                          <h1>Ana</h1>
+                          <span>1 semana atrás</span>
+                          <p>
+                            A Planta é simplesmente encantadora! Adoro como ela
+                            traz vida ao meu ambiente de forma tão fácil de
+                            cuidar. Recomendo!
+                          </p>
+                          <span>
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiOutlineStar />
+                            <AiOutlineStar />
+                          </span>
+                        </div>
+                        <div className={styles.review}>
+                          <h1>Pedro</h1>
+                          <span>3 dias atrás</span>
+                          <p>
+                            A Planta é perfeita para quem procura uma planta
+                            versátil e de baixa manutenção. Estou muito feliz
+                            com a minha escolha e ela adicionou um toque
+                            especial à minha casa.
+                          </p>
+                          <span>
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiOutlineStar />
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </div>
